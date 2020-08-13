@@ -4,4 +4,10 @@ class Anagram
   def initialize(word)
     @word = word
   end
+
+  def match(word_arr)
+    word_arr.find do |e|
+      @word.split("").sort == e.split("").sort
+    end
+  end
 end
